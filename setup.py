@@ -15,12 +15,12 @@ setup(
 
     name='pyzx7',  # Required
 
-    version='0.0.1',  # Required
+    version='0.0.3',  # Required
 
     description='ZX7 library Python integration',
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
-    url='https://github.com/jsmolina/py_zx7',  # Optional
+    url='https://github.com/jsmolina/pyzx7',  # Optional
     packages=['pyzx7'],
     ext_modules=[
         Extension(name="pyzx7/zx7",

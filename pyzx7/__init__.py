@@ -12,12 +12,20 @@ zx7_lib = ctypes.cdll.LoadLibrary(libfile)
 zx7_lib.comp.restype = ctypes.c_int
 zx7_lib.comp.argtypes = (ctypes.c_char_p,)
 
+class ZX7Exception(Exception):
+    pass
+
 
 def compress(filename):
+    output = filename + '.zx7'
+
     try:
         filename = filename.encode('utf-8')
     except:
         pass
 
-    zx7_lib.comp(filename)
+    result = zx7_lib.comp(filename)
+    if result != 0:
+        raise ZX7Exception("Error compressing")
 
+    return output
