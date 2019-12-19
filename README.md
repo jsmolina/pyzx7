@@ -5,6 +5,6 @@ Zx7 code is included for convenience, but author is 'Einar Saukas'
 # usage:
 ```python
 import pyzx7
-pyzx7.compress('out.bin')
+new_filename = pyzx7.compress('out.bin')
 ```
 Will automatically generate out.bin.zx7
