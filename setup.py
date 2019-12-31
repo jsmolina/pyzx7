@@ -28,4 +28,6 @@ setup(
                   include_dirs=['src'])
     ],
     author='jsmolina',
+    console_scripts=['map_convert = pyzx7.map:main',
+    ]
 )
